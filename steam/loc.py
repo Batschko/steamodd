@@ -50,8 +50,6 @@ class language(object):
         if not code:
             _system_language = os.environ.get("LANG", language._default_language).split('.')[0]
             if _system_language in language._languages.keys():
-                self._code = _system_language
-            else:
                 self._code = language._default_language
         else:
             code = code.lower()
